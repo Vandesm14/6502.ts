@@ -35,15 +35,15 @@ export function createRng(seed: number): GeneratorInterface {
 
     return new SeedrandomGenerator(
         seedrandom.alea(seed as any, {
-            state: true
+            state: true,
         })
     );
 }
 
-export function restoreRng(state: any): GeneratorInterface {
+export function restoreRng(state: seedrandom.State.Alea | true): GeneratorInterface {
     return new SeedrandomGenerator(
         seedrandom.alea('', {
-            state
+            state,
         })
     );
 }
