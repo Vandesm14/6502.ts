@@ -76,7 +76,7 @@
   },
   "scripts": {
     "test": "mocha --require ts-node/register -u tdd -R spec 'tests/ts/**/*.ts' && elm-test",
-    "build": "rm -fr dist; webpack --mode production -c ./webpack.config.js && workbox generateSW ./workbox.config.js && typedoc" ,
+    "build": "rm -fr dist; webpack --mode production -c ./webpack.config.js && workbox generateSW ./workbox.config.js && typedoc",
     "watch": "rm -fr dist-dev; mkdir -p dist-dev && cp html/dev-index.html dist-dev/index.html && webpack --watch --mode development -c ./webpack.config.js",
     "serve": "./node_modules/.bin/live-server --no-browser --port=6502 --no-css-inject  ./dist-dev",
     "start": "run-p watch serve",
